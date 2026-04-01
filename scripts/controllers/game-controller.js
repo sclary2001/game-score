@@ -5,6 +5,8 @@ import { renderStatus, renderLeaderboard } from '../modules/ui.js';
 import { logAction } from '../modules/utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log("App loaded");
+
   initializeSession();
   renderStatus('Session initialized. Ready.');
 
@@ -13,20 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const resetGameBtn = document.querySelector('#reset-game-btn');
   const viewLeaderboardBtn = document.querySelector('#view-leaderboard-btn');
 
+  console.log(savePlayerBtn, recordScoreBtn, resetGameBtn, viewLeaderboardBtn);
+
   savePlayerBtn.addEventListener('click', () => {
     savePlayer();
-    logAction('Saved player Garfield');
-    renderStatus('Player saved as Garfield.');
+    console.log("Save Player clicked");
+    logAction('Saved player Sean Clary');
+    renderStatus('Player saved as Sean Clary.');
   });
 
   recordScoreBtn.addEventListener('click', () => {
     const result = recordGarfieldHighScore();
+    console.log("Record Score clicked", result);
     logAction('Record high score button clicked');
     renderStatus(result.message);
   });
 
   resetGameBtn.addEventListener('click', () => {
     resetSession();
+    console.log("Game reset");
     logAction('Game reset');
     renderStatus('Game session reset.');
     renderLeaderboard([]);
@@ -34,8 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   viewLeaderboardBtn.addEventListener('click', () => {
     const scores = getLeaderboard();
+    console.log("Leaderboard:", scores);
     logAction('Viewed leaderboard');
     renderLeaderboard(scores);
     renderStatus('Leaderboard displayed.');
   });
-});
+});;
