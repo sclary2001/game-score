@@ -1,4 +1,4 @@
-import { GARFIELD_NEW_SCORE } from 'config/defaults.js';
+import { GARFIELD_NEW_SCORE } from '../config/defaults.js';
 import { getPlayer, getLeaderboardData, setLeaderboardData } from '../modules/game-session.js';
 
 export function recordGarfieldHighScore() {
@@ -7,7 +7,7 @@ export function recordGarfieldHighScore() {
   if (!player) {
     return {
       success: false,
-      message: 'No player saved yet. Please save Garfield first.'
+      message: 'No player saved yet. Please save Sean Clary first.'
     };
   }
 
