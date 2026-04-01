@@ -1,4 +1,4 @@
-import { initializeSession, savePlayer, resetSession } from '../modules/game-session.js';
+import { initializeSession, savePlayer, resetSession } from ' modules/game-session.js';
 import { recordGarfieldHighScore } from '../modules/score-manager.js';
 import { getLeaderboard } from '../modules/leaderboard.js';
 import { renderStatus, renderLeaderboard } from '../modules/ui.js';
