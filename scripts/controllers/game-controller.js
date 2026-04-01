@@ -5,7 +5,7 @@ import { renderStatus, renderLeaderboard } from '../modules/ui.js';
 import { logAction } from '../modules/utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("App loaded");
+  console.log("App loaded"); // ✅ DEBUG
 
   initializeSession();
   renderStatus('Session initialized. Ready.');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resetGameBtn = document.querySelector('#reset-game-btn');
   const viewLeaderboardBtn = document.querySelector('#view-leaderboard-btn');
 
-  console.log(savePlayerBtn, recordScoreBtn, resetGameBtn, viewLeaderboardBtn);
+  console.log(savePlayerBtn, recordScoreBtn, resetGameBtn, viewLeaderboardBtn); // ✅ DOM DEBUG
 
   savePlayerBtn.addEventListener('click', () => {
     savePlayer();
@@ -46,4 +46,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderLeaderboard(scores);
     renderStatus('Leaderboard displayed.');
   });
-});;
+});
