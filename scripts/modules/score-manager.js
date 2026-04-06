@@ -1,4 +1,4 @@
-import { GARFIELD_NEW_SCORE } from '../config/defaults.js';
+import { SEAN_CLARYS_NEW_SCORE } from '../config/defaults.js';
 import { getPlayer, getLeaderboardData, setLeaderboardData } from './game-session.js';
 
 export function recordGarfieldHighScore() {
@@ -15,7 +15,7 @@ export function recordGarfieldHighScore() {
 
   leaderboard.push({
     name: player,
-    score: GARFIELD_NEW_SCORE
+    score: SEAN_CLARYS_NEW_SCORE
   });
 
   leaderboard.sort((a, b) => b.score - a.score);
@@ -24,6 +24,6 @@ export function recordGarfieldHighScore() {
 
   return {
     success: true,
-    message: `${player}'s score of ${GARFIELD_NEW_SCORE} has been recorded.`
+    message: `${player}'s score of ${SEAN_CLARYS_NEW_SCORE} has been recorded.`
   };
 }

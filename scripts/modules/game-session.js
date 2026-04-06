@@ -1,4 +1,4 @@
-import { DEFAULT_PLAYER_NAME, DEFAULT_LEADERBOARD } from 'config/defaults.js';
+import { DEFAULT_PLAYER_NAME, DEFAULT_LEADERBOARD } from '../config/defaults.js';
 
 console.log('in modules/games-session.js'); 
 

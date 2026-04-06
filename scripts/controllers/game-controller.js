@@ -1,8 +1,12 @@
+console.log('in game controlller');
+
 import { initializeSession, savePlayer, resetSession } from '../modules/game-session.js';
 import { recordGarfieldHighScore } from '../modules/score-manager.js';
 import { getLeaderboard } from '../modules/leaderboard.js';
 import { renderStatus, renderLeaderboard } from '../modules/ui.js';
 import { logAction } from '../modules/utils.js';
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log("App loaded");
